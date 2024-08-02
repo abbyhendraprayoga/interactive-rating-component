@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100vw;
+  min-height: 80vh;
+  background-color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+  padding: 0rem 1rem 0 1rem;
+}
+body .container {
+  padding: 1.5rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  margin: 10rem 0 10rem 0;
+  border-radius: 1rem;
+}
+body .container .hidden {
+  display: none;
+}
+body .container .rating-card .rating-header-section {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 1.5rem 0;
+}
+body .container .rating-card .rating-header-section .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(217, 12%, 63%, 0.103);
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+}
+body .container .rating-card .rating-header-section .icon img {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+body .container .rating-card .rating-body-section {
+  display: flex;
+  flex-direction: column;
+}
+body .container .rating-card .rating-body-section .title {
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 400;
+  margin: 0 0 0.9rem 0;
+}
+body .container .rating-card .rating-body-section .description {
+  color: var(--light-grey);
+  font-size: 0.87rem;
+  text-align: left;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+body .container .rating-card .rating-body-section .ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 1.1rem 0;
+}
+body .container .rating-card .rating-body-section .ratings .selected {
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+}
+body .container .rating-card .rating-body-section .ratings span {
+  background-color: hsla(217, 12%, 63%, 0.103);
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-grey);
+  font-size: 0.87rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body .container .rating-card .rating-body-section .ratings span:hover {
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+body .container .rating-card .rating-body-section .ratings span:hover:active {
+  background-color: var(--orange);
+}
+body .container .rating-card .rating-footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .rating-card .rating-footer-section button {
+  display: flex;
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  font-weight: 800;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body .container .rating-card .rating-footer-section button .loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid var(--very-dark-blue);
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+body .container .rating-card .rating-footer-section button .hidden {
+  display: none;
+}
+body .container .rating-card .rating-footer-section button:hover {
+  background-color: var(--white);
+}
+body .container .rating-card .rating-footer-section button:hover:active {
+  background-color: var(--orange);
+}
+body .container .thank-you-card .thank-you-header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1.5rem 0;
+}
+body .container .thank-you-card .thank-you-header-section img {
+  width: 8rem;
+  height: 5.5rem;
+}
+body .container .thank-you-card .thank-you-body-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .thank-you-card .thank-you-body-section .rating-select {
+  display: flex;
+  background-color: hsla(217, 12%, 63%, 0.103);
+  width: 10rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1.5rem 0;
+  border-radius: 1rem;
+}
+body .container .thank-you-card .thank-you-body-section .rating-select span {
+  color: var(--orange);
+  font-size: 0.9rem;
+}
+body .container .thank-you-card .thank-you-body-section .title {
+  color: var(--white);
+  font-size: 0.7rem;
+  margin: 0 0 0.8rem 0;
+}
+body .container .thank-you-card .thank-you-body-section .description {
+  color: var(--light-grey);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 488px) {
+  body .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .container {
+    width: 20%;
+  }
+}/*# sourceMappingURL=styles.css.map */
